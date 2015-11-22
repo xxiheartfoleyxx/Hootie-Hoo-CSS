@@ -6,3 +6,6 @@ class UsersController < ApplicationController
       @conversations = Conversation.involving(current_user).order("created_at DESC")
   end
 end
+def show
+  @user = User.find(params[:id])
+end
