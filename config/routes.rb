@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-
+  devise_for :users, :path_prefix => 'd', :controllers => {:registrations => "users"}
+  resources :profiles
   authenticated :user do
     root 'users#index'
   end

@@ -3,9 +3,19 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :conversations, :foreign_key => :sender_id
+  validates :name, presence: true
 
+  has_one :profile
+  accepts_nested_attributes_for :profile
+  after_create :profile
+
+
+  # before_create :build_profile #creates profile at user registration
   after_create :create_default_conversation
 
+  def profile
+    self.build_profile(user_id: self.id)
+  end
 
   private
 
