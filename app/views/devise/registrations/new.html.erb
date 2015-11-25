@@ -11,19 +11,24 @@
         <div class="form-group">
           <%= f.label :email %>
           <%= f.email_field :email, class: "form-control" %></div>
-
-        <div class="form-group">
+        <% if f.object.password_required? %>
+          <div class="form-group">
           <%= f.label :password %>
           <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
 
-        <div class="form-group">
+          <div class="form-group">
           <%= f.label :password_confirmation %>
           <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
-        <div><%= f.submit "Sign up", class: "btn btn-success" %></div>
+        <% end %>  
+          <li>
+          <div><%= f.submit "Sign up", class: "btn btn-success" %>
+          <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+          </div>
+      </li>
     <% end %>
     <hr>
 
-    <%= render "devise/shared/links" %>
+    <!-- <%= render "devise/shared/links" %> -->
 
   </div>
 </div>
