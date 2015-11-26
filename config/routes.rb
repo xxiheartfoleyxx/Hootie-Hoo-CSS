@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   resources :locations
+  get '/locations/', to: 'locations#index'
 
   devise_for :users, :path_prefix => 'd', :controllers => {:registrations => "users", :omniauth_callbacks => "omniauth_callbacks"}
 
   resources :profiles
   authenticated :user do
     devise_scope :user do
-      # root 'users#index'
-      root 'locations#index'
+      root 'users#index'
+      # root 'locations#index'
     end
   end
 
