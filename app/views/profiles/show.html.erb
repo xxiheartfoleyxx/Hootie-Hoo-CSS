@@ -1,0 +1,11 @@
+<%= link_to "#{current_user.name}" %>
+
+<h1><%= @reciever.name %> </h1>
+
+<%= link_to "<i class='fa  fa-times'></i> ".html_safe, "#", class: "closeChat", "data-cid" => @conversation.id %>
+< div class="chatboxcontent">
+    <% if @messages.any? %>
+        <%= render @messages %>
+    <% end %>
+< /div>
+<%= subscribe_to conversation_path(@conversation) %>
