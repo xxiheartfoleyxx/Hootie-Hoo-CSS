@@ -15,6 +15,5 @@
 //= require bootstrap.min
 //= require private_pub
 //= require chat
-//= require remotipart
 //= require turbolinks
 //= require_tree .
