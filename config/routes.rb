@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :locations
+
   devise_for :users, :path_prefix => 'd', :controllers => {:registrations => "users", :omniauth_callbacks => "omniauth_callbacks"}
 
   resources :profiles
