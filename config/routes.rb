@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  get "locations" => "locations#index"
   devise_for :users, :path_prefix => 'd', :controllers => {:registrations => "users", :omniauth_callbacks => "omniauth_callbacks"}
 
   resources :profiles
