@@ -1,6 +1,12 @@
+<div class="jumbotron">
+  <div class="hootie-hoo">
+      <h1 class="title">Hootie-Hoo!</h1>
+  </div>
+
+
 <div class="row">
   <div class="col-md-offset-4 col-md-4">
-    <legend>Sign up to break the ice!</legend>
+    <!-- <legend>Sign up to break the ice!</legend> -->
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
@@ -19,14 +25,14 @@
           <div class="form-group">
           <%= f.label :password_confirmation %>
           <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
-        <% end %>  
-          <li>
-          <div><%= f.submit "Sign up", class: "btn btn-success" %>
+        <% end %>
+          <!-- <li> -->
+          <div><%= f.submit "Sign Up", class: "btn btn-primary" %>
           <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
           </div>
-      </li>
+      <!-- </li> -->
     <% end %>
-    <hr>
+
 
     <!-- <%= render "devise/shared/links" %> -->
 

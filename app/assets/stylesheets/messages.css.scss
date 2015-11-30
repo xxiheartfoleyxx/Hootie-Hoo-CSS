@@ -1,3 +1,50 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.blink-owl {
+    float: right;
+    width: 8%;
+    margin-left: 180px;
+}
+
+  .blink-owl > img {
+    width: 150%;
+}
+
+
+
+.bar img {
+  width: 110%;
+  height: 42vh;
+
+}
+
+.bar {
+    margin-top: 50px;
+    display: flex;
+}
+
+.self, .other{
+  display: flex;
+}
+
+img.hootie {
+    width: 25%;
+}
+
+
+
+.break-ice {
+  font-family: "In-House Edition";
+  color: #4eb1e8;
+  font-size: 50px;
+  text-shadow: 1px 1px 1px black;
+}

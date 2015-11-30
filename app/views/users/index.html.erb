@@ -1,10 +1,24 @@
+<div class="bar">
+  <%= image_tag "bar.jpg" %>
+</div>
+<div class="container1">
+<div class="blink-owl">
+  <%= image_tag "blinking-owl.gif"  %>
+</div>
+</div>
+<div class="break-ice">
+  <h3>Breaking the ice, one Hoot at a time!</h3>
+  <%#= image_tag "breaking-ice.png" %>
+</div>
+
+
 <div class="row">
   <!-- Not implemented on tutorial -->
   <div class="col-md-4">
     <div style="height: 300px; overflow-y: auto;">
       <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading">Registered Users</div>
+        <div class="panel-heading"><%= image_tag "hooties.png", class: "hootie" %></div>
 
         <!-- Table -->
         <table class="table">
@@ -21,34 +35,41 @@
                 <td><%= index +=1 %></td>
                 <td><%= user.name %></td>
                 <td>
-                  <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
+                  <div class="media">
+                    <%= image_tag("https://placehold.it/50x50", class: "media-object pull-left") %>
+                  </div>
+                  <div class="message">
+                  <%= link_to "Send Hoot!", "#", class: "btn btn-primary btn-xs start-conversation",
                               "data-sid" => current_user.id, "data-rip" => user.id %>
-                </td>
-              </tr>
+                </div>
+              </td>
+            </tr>
           <% end %>
 
           </tbody>
         </table>
       </div>
 
-    </div>
+    <!-- </div>
+    <div class="conversations">
     <hr>
     <h3>Your Conversations</h3>
 
     <div style="height: 400px; overflow-y: auto;">
       <% if @conversations.any? %>
           <ul class="media-list">
-            <% @conversations.each do |conversation| %>
-                <li class="media">
+            <% @conversations.each do |conversation| %> -->
+                <!-- <li class="media">
                   <%= image_tag("https://placehold.it/50x50", class: "media-object pull-left") %>
-                  <div class="media-body">
-                    <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
+                  <div class="media-body"> -->
+                    <!-- <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
                         <h4 class="media-heading"><%= conversation_interlocutor(conversation).name %></h4>
                         <p><%= conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %></p>
                   </div>
-                </li>
+                </div>
+              </li> -->
 
-            <% end %>
+            <!-- <% end %> -->
           </ul>
       <% else %>
           <p>You have no conversations. Click send message with any user to create one.</p>

@@ -1035,8 +1035,9 @@ h2,
 .h2,
 h3,
 .h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
+  margin-top: 80px;
+  margin-bottom: 10px;
+  color: #4eb1e8;
 }
 h1 small,
 .h1 small,
@@ -1085,7 +1086,8 @@ h2,
 }
 h3,
 .h3 {
-    font-size: 24px;
+  font-size: 54px;
+  text-align: center;
 }
 h4,
 .h4 {
@@ -2313,6 +2315,7 @@ label {
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: bold;
+    color: white;
 }
 input[type="search"] {
     -webkit-box-sizing: border-box;
@@ -4188,8 +4191,9 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     color: #ccc;
 }
 .navbar-inverse {
-    background-color: #222;
-    border-color: #080808;
+
+    background-color: white;
+    border-color: white;
 }
 .navbar-inverse .navbar-brand {
     color: #777;
@@ -4224,10 +4228,12 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-toggle {
     border-color: #333;
+    background-color: #4eb1e8;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
     background-color: #333;
+
 }
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: #fff;
@@ -4245,6 +4251,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
         border-color: #080808;
+
     }
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
         background-color: #080808;
@@ -4546,7 +4553,7 @@ a.list-group-item.active > .badge,
 }
 .jumbotron {
     padding: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     color: inherit;
     background-color: #eee;
 }
@@ -4568,11 +4575,11 @@ a.list-group-item.active > .badge,
 .jumbotron .container {
     max-width: 100%;
 }
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {
     .jumbotron {
         padding-top: 48px;
-        padding-bottom: 48px;
-    }
+        padding-bottom: 0;
+    }*/
     .container .jumbotron {
         padding-right: 60px;
         padding-left: 60px;
@@ -4994,6 +5001,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel {
     margin-bottom: 20px;
+    margin-top: 50px;
     background-color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;

@@ -230,7 +230,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :facebook, "985521251505875", "3e6f712098f14d21f9f4d32f2dc46226", callback_url: "https://sheltered-tor-9615.herokuapp.com/"
+  config.omniauth :facebook, "985521251505875", "3e6f712098f14d21f9f4d32f2dc46226", callback_url: "localhost:3000"
   config.omniauth :facebook, "985521251505875", "3e6f712098f14d21f9f4d32f2dc46226", scope: 'email', info_fields: 'email', image_size: 'square'
 
 
